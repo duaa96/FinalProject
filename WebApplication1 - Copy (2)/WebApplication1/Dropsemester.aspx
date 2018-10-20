@@ -171,8 +171,9 @@ body {
      
      <a style="font-size: 25px; text-align: right;float:right; padding-right: 20px;">ارغب في سحب الفصل المشار اليه اعلاه بسبب</a>
      <br>
-     <input style="width: 95%; height: 50px; text-align:right" type="text" name="name" id="txtReasons" >
-     <br>
+     &nbsp;<br>
+     
+          <asp:TextBox ID="txtReasons" runat="server"></asp:TextBox>
      
      <br>
      <table width="90%"  border="1"  class="table5" align="center"  >

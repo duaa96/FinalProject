@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltenativeSubject.aspx.cs" Inherits="WebApplication1.AltenativeSubject" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltSubject.aspx.cs" Inherits="WebApplication1.AltSubject" %>
 
 <html>
 <head>
@@ -131,24 +131,23 @@ body {
     </tr>
     <tr>
         <th style="width:200px" >
-            <asp:TextBox ID="txtAlternativeHoursC1" runat="server"></asp:TextBox>
+            <asp:Label ID="labHoursAlternative" runat="server" Text="Label"></asp:Label>
         </th>
       <th style="width:200px" >
-          <asp:TextBox ID="txtAlternativeNum1C1" runat="server" ></asp:TextBox>
+          <asp:TextBox ID="txtAlternativeNum1C1" runat="server" OnTextChanged="txtAlternativeNum1C1_TextChanged" AutoPostBack="true" ></asp:TextBox>
         </th>
       <th style="width:200px" >
           <asp:DropDownList ID="ddlAlternativeCourse1" runat="server" OnSelectedIndexChanged="ddlAlternativeCourse1_SelectedIndexChanged" AutoPostBack="true">
           </asp:DropDownList>
         </th>
-      <th style="width:200px" >
-          <asp:TextBox ID="txtNumHoursC1" runat="server"></asp:TextBox>
+      <th style="width:200px" id="labHoursCourse1" >
+          <asp:Label ID="labHoursCourse1" runat="server" Text="Label"></asp:Label>
         </th>
       <th style="width:200px" >
-          <asp:DropDownList ID="ddlTypeCourse1" runat="server">
-          </asp:DropDownList>
+          <asp:Label ID="labTypeCourse1" runat="server" Text="Label"></asp:Label>
         </th>
       <th style="width:200px" >
-          <asp:TextBox ID="txtNumberCourse1" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtNumberCourse1" runat="server" OnTextChanged="txtNumberCourse1_TextChanged" AutoPostBack="true"></asp:TextBox>
         </th>
       <th style="width:200px" >
           <asp:DropDownList ID="ddlCourse1" runat="server" OnSelectedIndexChanged="ddlCourse1_SelectedIndexChanged" AutoPostBack="true">
@@ -209,3 +208,4 @@ body {
 
 </body>
 </html>
+

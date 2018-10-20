@@ -131,7 +131,7 @@ public class RegistredCourses
         SqlConnection Connection = new SqlConnection(Connectionstring);
         Connection.Open();
         DataTable dt = new DataTable();
-        SqlDataAdapter DA = new SqlDataAdapter("select Subjects.SubjectName ,S1.SubjectID from (select SubjectID From Subjects WHERE SubjectID IN(select Subjects.SubjectID From Subjects, Students, RegistredCourses WHERE  ID ="+ StudentsID + "and Subjects.SectionID = Students.SectionID))AS S1, Subjects WHERE S1.SubjectID NOT IN(select SubjectID from RegistredCourses WHERE StudentsID ="+ StudentsID+")" +"AND S1.SubjectID = Subjects.SubjectID", Connection);
+        SqlDataAdapter DA = new SqlDataAdapter("select Subjects.SubjectName ,S1.SubjectID ,Subjects.Type,Subjects.Hours from (select SubjectID From Subjects WHERE SubjectID IN(select Subjects.SubjectID From Subjects, Students, RegistredCourses WHERE  ID =" + StudentsID + "and Subjects.SectionID = Students.SectionID))AS S1, Subjects WHERE S1.SubjectID NOT IN(select SubjectID from RegistredCourses WHERE StudentsID ="+ StudentsID+")" +"AND S1.SubjectID = Subjects.SubjectID", Connection);
         DA.Fill(dt);
         Connection.Close();
         return dt;

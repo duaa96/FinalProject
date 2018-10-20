@@ -67,9 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AbsenceEmp.aspx" />
     <Content Include="Absenceexcuse.aspx" />
     <Content Include="AddStudent.aspx" />
-    <Content Include="AltenativeSubject.aspx" />
+    <Content Include="AltiSubjAcademicAdvisorAcceptEmp.aspx" />
+    <Content Include="AltiSubjHeadAcceptEmp.aspx" />
+    <Content Include="AltiSubjRegestrationAcceptEmp.aspx" />
+    <Content Include="AltSubject.aspx" />
+    <Content Include="AltSubjectDeanEmp.aspx" />
     <Content Include="css\bar.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\fontawesome-all.css" />
@@ -78,7 +83,13 @@
     <Content Include="css\style.css" />
     <Content Include="css\style4.css" />
     <Content Include="css\widgets.css" />
+    <Content Include="DelaySemester.aspx" />
     <Content Include="Dropsemester.aspx" />
+    <Content Include="DropSemesterAcademicAdvisorAcceptEmp.aspx" />
+    <Content Include="DropSemesterDeanEmp.aspx" />
+    <Content Include="DropSemesterDeputyAcademicAcceptEmp.aspx" />
+    <Content Include="DropSemesterHeadEmp.aspx" />
+    <Content Include="DropSemesterRegestraionAcceptEmp.aspx" />
     <Content Include="HomeEmployee.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
@@ -122,14 +133,28 @@
     <Content Include="js\simplyCountdown.js" />
     <Content Include="js\skycons.js" />
     <Content Include="Login.aspx" />
+    <Content Include="MyApplication.aspx" />
+    <Content Include="PullCourseDeanEmp.aspx" />
     <Content Include="PullCourse.aspx" />
+    <Content Include="PullCourseHeadAcceptEmp.aspx" />
+    <Content Include="PullCourseRegestrationAcceptEmp.aspx" />
     <Content Include="ShowStates.aspx" />
+    <Content Include="HomeStudent.aspx" />
+    <Content Include="ShowStatusEmpDean.aspx" />
+    <Content Include="ShowStatusHeadAcceptEmp.aspx" />
     <Content Include="Web.config" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsenceEmp.aspx.cs">
+      <DependentUpon>AbsenceEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AbsenceEmp.aspx.designer.cs">
+      <DependentUpon>AbsenceEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AbsenceExam.cs" />
     <Compile Include="Absenceexcuse.aspx.cs">
       <DependentUpon>Absenceexcuse.aspx</DependentUpon>
@@ -145,17 +170,52 @@
     <Compile Include="AddStudent.aspx.designer.cs">
       <DependentUpon>AddStudent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AltenativeSubject.aspx.cs">
-      <DependentUpon>AltenativeSubject.aspx</DependentUpon>
+    <Compile Include="AltiSubjAcademicAdvisorAcceptEmp.aspx.cs">
+      <DependentUpon>AltiSubjAcademicAdvisorAcceptEmp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AltenativeSubject.aspx.designer.cs">
-      <DependentUpon>AltenativeSubject.aspx</DependentUpon>
+    <Compile Include="AltiSubjAcademicAdvisorAcceptEmp.aspx.designer.cs">
+      <DependentUpon>AltiSubjAcademicAdvisorAcceptEmp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AlternativeSubject.cs" />
+    <Compile Include="AltiSubjHeadAcceptEmp.aspx.cs">
+      <DependentUpon>AltiSubjHeadAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltiSubjHeadAcceptEmp.aspx.designer.cs">
+      <DependentUpon>AltiSubjHeadAcceptEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltiSubjRegestrationAcceptEmp.aspx.cs">
+      <DependentUpon>AltiSubjRegestrationAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltiSubjRegestrationAcceptEmp.aspx.designer.cs">
+      <DependentUpon>AltiSubjRegestrationAcceptEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltSubject.aspx.cs">
+      <DependentUpon>AltSubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltSubject.aspx.designer.cs">
+      <DependentUpon>AltSubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltSubjectDeanEmp.aspx.cs">
+      <DependentUpon>AltSubjectDeanEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltSubjectDeanEmp.aspx.designer.cs">
+      <DependentUpon>AltSubjectDeanEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Application.cs" />
+    <Compile Include="AlternativeSub.cs" />
     <Compile Include="College.cs" />
-    <Compile Include="DelaySemester.cs" />
+    <Compile Include="DelaySemester.aspx.cs">
+      <DependentUpon>DelaySemester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DelaySemester.aspx.designer.cs">
+      <DependentUpon>DelaySemester.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DelaySemesterClass.cs" />
     <Compile Include="Dropsemester.aspx.cs">
       <DependentUpon>Dropsemester.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,6 +224,41 @@
       <DependentUpon>Dropsemester.aspx</DependentUpon>
     </Compile>
     <Compile Include="DropSemester.cs" />
+    <Compile Include="DropSemesterAcademicAdvisorAcceptEmp.aspx.cs">
+      <DependentUpon>DropSemesterAcademicAdvisorAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropSemesterAcademicAdvisorAcceptEmp.aspx.designer.cs">
+      <DependentUpon>DropSemesterAcademicAdvisorAcceptEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropSemesterDeanEmp.aspx.cs">
+      <DependentUpon>DropSemesterDeanEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropSemesterDeanEmp.aspx.designer.cs">
+      <DependentUpon>DropSemesterDeanEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropSemesterDeputyAcademicAcceptEmp.aspx.cs">
+      <DependentUpon>DropSemesterDeputyAcademicAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropSemesterDeputyAcademicAcceptEmp.aspx.designer.cs">
+      <DependentUpon>DropSemesterDeputyAcademicAcceptEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropSemesterHeadEmp.aspx.cs">
+      <DependentUpon>DropSemesterHeadEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropSemesterHeadEmp.aspx.designer.cs">
+      <DependentUpon>DropSemesterHeadEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropSemesterRegestraionAcceptEmp.aspx.cs">
+      <DependentUpon>DropSemesterRegestraionAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropSemesterRegestraionAcceptEmp.aspx.designer.cs">
+      <DependentUpon>DropSemesterRegestraionAcceptEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="HomeEmployee.aspx.cs">
       <DependentUpon>HomeEmployee.aspx</DependentUpon>
@@ -179,6 +274,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MyApplication.aspx.cs">
+      <DependentUpon>MyApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyApplication.aspx.designer.cs">
+      <DependentUpon>MyApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PullCourseDeanEmp.aspx.cs">
+      <DependentUpon>PullCourseDeanEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PullCourseDeanEmp.aspx.designer.cs">
+      <DependentUpon>PullCourseDeanEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PullCourse.aspx.cs">
@@ -188,7 +297,21 @@
     <Compile Include="PullCourse.aspx.designer.cs">
       <DependentUpon>PullCourse.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PullCourse.cs" />
+    <Compile Include="PullCourseClass.cs" />
+    <Compile Include="PullCourseHeadAcceptEmp.aspx.cs">
+      <DependentUpon>PullCourseHeadAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PullCourseHeadAcceptEmp.aspx.designer.cs">
+      <DependentUpon>PullCourseHeadAcceptEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PullCourseRegestrationAcceptEmp.aspx.cs">
+      <DependentUpon>PullCourseRegestrationAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PullCourseRegestrationAcceptEmp.aspx.designer.cs">
+      <DependentUpon>PullCourseRegestrationAcceptEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistredCourses.cs" />
     <Compile Include="Section.cs" />
     <Compile Include="ShowStates.aspx.cs">
@@ -198,13 +321,36 @@
     <Compile Include="ShowStates.aspx.designer.cs">
       <DependentUpon>ShowStates.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ShowStatus.cs" />
+    <Compile Include="ShowStatusClass.cs" />
+    <Compile Include="ShowStatusEmpDean.aspx.cs">
+      <DependentUpon>ShowStatusEmpDean.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowStatusEmpDean.aspx.designer.cs">
+      <DependentUpon>ShowStatusEmpDean.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowStatusHeadAcceptEmp.aspx.cs">
+      <DependentUpon>ShowStatusHeadAcceptEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowStatusHeadAcceptEmp.aspx.designer.cs">
+      <DependentUpon>ShowStatusHeadAcceptEmp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Studnets.cs" />
     <Compile Include="Subjects.cs" />
+    <Compile Include="HomeStudent.aspx.cs">
+      <DependentUpon>HomeStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeStudent.aspx.designer.cs">
+      <DependentUpon>HomeStudent.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\Thumbs.db" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -225,7 +371,9 @@
     <Content Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="obj\" />
     <Folder Include="UploadFiles\" />
+    <Folder Include="webfonts\App_LocalResources\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

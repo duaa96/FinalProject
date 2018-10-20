@@ -22,40 +22,40 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtHead control.
+        /// labHeadName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHead;
+        protected global::System.Web.UI.WebControls.Label labHeadName;
         
         /// <summary>
-        /// txtNumberStudent control.
+        /// labStudentNmuber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumberStudent;
+        protected global::System.Web.UI.WebControls.Label labStudentNmuber;
         
         /// <summary>
-        /// txtNameStudent control.
+        /// labStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNameStudent;
+        protected global::System.Web.UI.WebControls.Label labStudentName;
         
         /// <summary>
-        /// ddlNameTeacherC1 control.
+        /// labTeacher1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameTeacherC1;
+        protected global::System.Web.UI.WebControls.Label labTeacher1;
         
         /// <summary>
         /// txtTimeCourse1 control.
@@ -85,13 +85,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.DropDownList ddlNameCourse1;
         
         /// <summary>
-        /// ddlNameTeacherC2 control.
+        /// labTeacher2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameTeacherC2;
+        protected global::System.Web.UI.WebControls.Label labTeacher2;
         
         /// <summary>
         /// txtTimeCourse2 control.
@@ -121,13 +121,13 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.DropDownList ddlNameCourse2;
         
         /// <summary>
-        /// ddlNameTeacherC3 control.
+        /// labTeacher3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameTeacherC3;
+        protected global::System.Web.UI.WebControls.Label labTeacher3;
         
         /// <summary>
         /// txtTimeCourse3 control.
@@ -157,78 +157,6 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.DropDownList ddlNameCourse3;
         
         /// <summary>
-        /// ddlNameTeacherC4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameTeacherC4;
-        
-        /// <summary>
-        /// txtTimeCourse4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTimeCourse4;
-        
-        /// <summary>
-        /// txtNumCourse4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumCourse4;
-        
-        /// <summary>
-        /// ddlNameCourse4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameCourse4;
-        
-        /// <summary>
-        /// ddlNameTeacherC5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameTeacherC5;
-        
-        /// <summary>
-        /// txtTimeCourse5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTimeCourse5;
-        
-        /// <summary>
-        /// txtNumCourse5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumCourse5;
-        
-        /// <summary>
-        /// ddlNameCourse5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlNameCourse5;
-        
-        /// <summary>
         /// txtNmberHours control.
         /// </summary>
         /// <remarks>
@@ -254,5 +182,14 @@ namespace WebApplication1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtReason;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

@@ -26,6 +26,7 @@ public class Application
         return x;
     }
 
+   
 
     public void UpdateApplication(int ApplicationID, string ApplicationName, int Enable,string ExpireDate)
     {
@@ -53,4 +54,112 @@ public class Application
         Command.ExecuteNonQuery();
         Connection.Close();
     }
+
+    public DataTable dtSearchApplication(DateTime Date1)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from Application where  ExpireDate >='"+ Date1 + "'", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
+    public DataTable dtSearchMyApplication()
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from Application  ", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
+
+
+
+
+    public DataTable dtSearchMyAbsenceApplication(int StudentID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from AbsenceExam,Subjects where AbsenceExam.Subject1 =Subjects.SubjectID  and StudentID= " + StudentID + "", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+        
+    }
+
+    public DataTable dtSearchDropSemesterApplication(int StudentID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from DropSemester where StudentID= " + StudentID + "", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
+    public DataTable dtSearchAlternativeSubjectApplication(int StudentID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from AlternativeSubject,Subjects where AlternativeSubject.Subject1ID =Subjects.SubjectID and StudentID= " + StudentID + "", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
+    public DataTable dtSearchShowStatusApplication(int StudentID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from ShowStatus where  StudentID= " + StudentID + "", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
+    public DataTable dtSearchPullCourseApplication(int StudentID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from PullCourse,Subjects where  PullCourse.Subject1ID =Subjects.SubjectID and StudentID= " + StudentID + "", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
+   
+
+
+   
+    public DataTable dtNotAcceptAliSubDeanApplication()
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from AlternativeSubject,Subjects where AlternativeSubject.Subject1ID =Subjects.SubjectID  and HeadAccept=1 and DeanAccept <> 1", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+    }
+
 }
+
+  
+
+    

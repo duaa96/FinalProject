@@ -56,6 +56,11 @@ body {
 }
 
 				
+    .auto-style1 {
+        margin-bottom: 0px;
+    }
+
+				
 </style>
 </head>
 
@@ -69,8 +74,8 @@ body {
   </div>
   <br>
 
-  <a style="font-size:25px;">السيد الدكتور رئيس قسم 
-      <asp:TextBox ID="txtHead" runat="server"></asp:TextBox>
+  <a style="font-size:25px;">السيد الدكتور<asp:Label ID="labHeadName" runat="server" Text="Label"></asp:Label>
+&nbsp;رئيس قسم
 &nbsp;المحترم </a> 
       <br><br><br>
       <table width="100%"  border="1"  class="table5"  >
@@ -78,11 +83,11 @@ body {
    
 
     <tr  style="font-size:18px; height:40px;  background-color:#F0F0F0;">
-      <td style="width:270px"> صاحب الرقم الجامعي<asp:TextBox ID="txtNumberStudent" runat="server"></asp:TextBox>
+      <td style="width:270px"> صاحب الرقم الجامعي<asp:Label ID="labStudentNmuber" runat="server" Text="Label"></asp:Label>
         </td>
       <td style="width:270px">
-          <asp:TextBox ID="txtNameStudent" runat="server"></asp:TextBox>
-&nbsp;انا الطالب/ة</td>
+&nbsp;انا الطالب/ة<asp:Label ID="labStudentName" runat="server" Text="Label"></asp:Label>
+        </td>
       
     </tr>
   </tbody>
@@ -102,88 +107,73 @@ body {
     </tr>
     <tr>
         <th style="width:270px ; border:hidden" >
-            <asp:DropDownList ID="ddlNameTeacherC1" runat="server">
-            </asp:DropDownList>
+            <asp:Label ID="labTeacher1" runat="server" Text="Label"></asp:Label>
         </th>
       <th style="width:270px; border:hidden" >
           <asp:TextBox ID="txtTimeCourse1" runat="server"></asp:TextBox>
         </th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtNumCourse1" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtNumCourse1" runat="server" OnTextChanged="txtNumCourse1_TextChanged" AutoPostBack="true"></asp:TextBox>
         </th>
       <th style="width:270px; border:hidden" >
-          <asp:DropDownList ID="ddlNameCourse1" runat="server">
+          <asp:DropDownList ID="ddlNameCourse1" runat="server" OnSelectedIndexChanged="ddlNameCourse1_SelectedIndexChanged" AutoPostBack="true">
           </asp:DropDownList>
         </th>
       <th style="width:270px; border:hidden"> 1</th>
     </tr>
      <tr>
         <th style="width:270px; border:hidden" >
-            <asp:DropDownList ID="ddlNameTeacherC2" runat="server">
-            </asp:DropDownList>
+            <asp:Label ID="labTeacher2" runat="server" Text="Label"></asp:Label>
          </th>
       <th style="width:270px; border:hidden" >
           <asp:TextBox ID="txtTimeCourse2" runat="server"></asp:TextBox>
          </th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtNumCourse2" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtNumCourse2" runat="server" OnTextChanged="txtNumCourse2_TextChanged" AutoPostBack="true"></asp:TextBox>
          </th>
       <th style="width:270px; border:hidden" >
-          <asp:DropDownList ID="ddlNameCourse2" runat="server">
+          <asp:DropDownList ID="ddlNameCourse2" runat="server" CssClass="auto-style1" OnSelectedIndexChanged="ddlNameCourse2_SelectedIndexChanged" AutoPostBack="true">
           </asp:DropDownList>
          </th>
       <th style="width:270px; border:hidden"> 2</th>
     </tr>
      <tr>
         <th style="width:270px; border:hidden" >
-            <asp:DropDownList ID="ddlNameTeacherC3" runat="server">
-            </asp:DropDownList>
+            <asp:Label ID="labTeacher3" runat="server" Text="Label"></asp:Label>
          </th>
       <th style="width:270px; border:hidden" >
           <asp:TextBox ID="txtTimeCourse3" runat="server"></asp:TextBox>
          </th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtNumCourse3" runat="server"></asp:TextBox>
+          <asp:TextBox ID="txtNumCourse3" runat="server" OnTextChanged="txtNumCourse3_TextChanged" AutoPostBack="true"></asp:TextBox>
          </th>
       <th style="width:270px; border:hidden" >
-          <asp:DropDownList ID="ddlNameCourse3" runat="server">
+          <asp:DropDownList ID="ddlNameCourse3" runat="server" OnSelectedIndexChanged="ddlNameCourse3_SelectedIndexChanged" AutoPostBack="true">
           </asp:DropDownList>
          </th>
       <th style="width:270px; border:hidden"> 3</th>
     </tr>
      <tr>
         <th style="width:270px; border:hidden" >
-            <asp:DropDownList ID="ddlNameTeacherC4" runat="server">
-            </asp:DropDownList>
-         </th>
+            &nbsp;</th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtTimeCourse4" runat="server"></asp:TextBox>
-         </th>
+          &nbsp;</th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtNumCourse4" runat="server"></asp:TextBox>
-         </th>
+          &nbsp;</th>
       <th style="width:270px; border:hidden" >
-          <asp:DropDownList ID="ddlNameCourse4" runat="server">
-          </asp:DropDownList>
-         </th>
-      <th style="width:270px; border:hidden"> 4</th>
+          &nbsp;</th>
+      <th style="width:270px; border:hidden"> &nbsp;</th>
     </tr>
      <tr>
         <th style="width:270px; border:hidden" >
-            <asp:DropDownList ID="ddlNameTeacherC5" runat="server">
-            </asp:DropDownList>
-         </th>
+            &nbsp;</th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtTimeCourse5" runat="server"></asp:TextBox>
-         </th>
+          &nbsp;</th>
       <th style="width:270px; border:hidden" >
-          <asp:TextBox ID="txtNumCourse5" runat="server"></asp:TextBox>
-         </th>
+          &nbsp;</th>
       <th style="width:270px; border:hidden" >
-          <asp:DropDownList ID="ddlNameCourse5" runat="server">
-          </asp:DropDownList>
-         </th>
-      <th style="width:270px; border:hidden"> 5</th>
+          &nbsp;</th>
+      <th style="width:270px; border:hidden"> &nbsp;</th>
     </tr>
   </tbody>
 </table>
@@ -199,6 +189,7 @@ body {
      <br>
      &nbsp;<asp:TextBox ID="txtReason" runat="server"></asp:TextBox>
      <br>
+      <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
      <br>
      </form>
 

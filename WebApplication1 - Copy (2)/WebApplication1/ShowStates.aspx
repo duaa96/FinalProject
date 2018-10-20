@@ -70,8 +70,7 @@ body {
   <div align="center">
     &nbsp;<h  style="text-align:center; font-size: 20px;align-items: center;">كلية</h><div align="center">
     &nbsp;<h  style="text-align:center; font-size: 20px;align-items: center;">كلية</h>
-          <asp:DropDownList ID="ddlCollage" runat="server">
-          </asp:DropDownList>
+          <asp:Label ID="labCollage" runat="server" Text="Label"></asp:Label>
       </div>
       &nbsp;</div>
       <br>
@@ -80,30 +79,23 @@ body {
    
  <tr  style="font-size:18px; height:40px;  background-color:#F0F0F0;">
       
-      <td style="width:270px ">&nbsp;<asp:DropDownList ID="DropDownList2" runat="server">
-          <asp:ListItem>2018/2019</asp:ListItem>
-          <asp:ListItem>2019/2018</asp:ListItem>
-          </asp:DropDownList>
-          من العام الجامعي</td>
-      <td style="width:270px"> الفصل الدراسي<asp:DropDownList ID="DropDownList1" runat="server">
-          <asp:ListItem>الاول</asp:ListItem>
-          <asp:ListItem>الثاني</asp:ListItem>
-          <asp:ListItem>الصيفي</asp:ListItem>
-          </asp:DropDownList>
+      <td style="width:270px ">&nbsp;من العام الجامعي<asp:Label ID="labYear" runat="server" Text="Label"></asp:Label>
+      </td>
+      <td style="width:270px"> الفصل الدراسي<asp:Label ID="labSemester" runat="server" Text="Label"></asp:Label>
       </td>
     </tr>
     <tr  style="font-size:18px; height:40px;  background-color:#F0F0F0;">
-      <td style="width:270px"> الرقم الجامعي<asp:TextBox ID="txtNumberStudent" runat="server"></asp:TextBox>
+      <td style="width:270px"> الرقم الجامعي<asp:Label ID="labStudentNumber" runat="server" Text="Label"></asp:Label>
         </td>
-      <td style="width:270px">&nbsp;اسم الطالب<asp:TextBox ID="txtNameStudent" runat="server"></asp:TextBox>
+      <td style="width:270px">&nbsp;اسم الطالب<asp:Label ID="labStudentName" runat="server" Text="Label"></asp:Label>
         </td>
       
     </tr>
     <tr  style="font-size:18px; height:40px;  background-color:#F0F0F0;">
-      <td style="width:270px"> التخصص<asp:TextBox ID="txtSpecialty" runat="server"></asp:TextBox>
+      <td style="width:270px"> التخصص<asp:Label ID="labMager" runat="server" Text="Label"></asp:Label>
         </td>
       <td style="width:270px">&nbsp;القسم   
-          <asp:TextBox ID="txtSectionStudent" runat="server"></asp:TextBox>
+          <asp:Label ID="labSection" runat="server" Text="Label"></asp:Label>
         </td>
       
     </tr>
@@ -128,7 +120,7 @@ body {
       
       <td style="width:270px">&nbsp;توقيع الطالب<asp:FileUpload ID="fuSignatureStudent" runat="server" />
       </td>
-      <td style="width:270px"> التاريخ<asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
+      <td style="width:270px"> التاريخ<asp:Label ID="labDate" runat="server" Text="Label"></asp:Label>
       </td>
     </tr>
     <tr  style="font-size:18px; height:40px;  background-color:#F0F0F0;">
@@ -143,6 +135,8 @@ body {
     </tr>
   </tbody>
 </table>
+
+          <asp:Button ID="btnSave" runat="server" Text="Button" OnClick="btnSave_Click" />
 
 <br>
 <br>

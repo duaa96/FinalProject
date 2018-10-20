@@ -62,10 +62,19 @@ namespace WebApplication1
         {
           
             string date1 = DateTime.Today.ToString();
+            string Reason = txtReasons.Text.ToString();
+           int ID =Convert.ToInt32( Session["ID"].ToString());
+            DropSemester objsem = new DropSemester();
+            
+            if(objsem.AddDropSemester(ID, Reason, date1, "", 0, "", 0, "", 0, "", 0, "", 2)==1)
+            {
+                txtReasons.Text = "";
+            }
+        }
 
+        protected void gvCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-          // DropSemester objsem = new DropSemester();
-            //objsem.AddDropSemester()
         }
     }
 }

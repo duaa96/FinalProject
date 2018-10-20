@@ -10,7 +10,7 @@
 namespace WebApplication1 {
     
     
-    public partial class AltenativeSubject {
+    public partial class DelaySemester {
         
         /// <summary>
         /// form1 control.
@@ -31,22 +31,40 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Label labCollage;
         
         /// <summary>
-        /// labNumStudent control.
+        /// labYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labNumStudent;
+        protected global::System.Web.UI.WebControls.Label labYear;
         
         /// <summary>
-        /// labNameStudent control.
+        /// labSemester control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labNameStudent;
+        protected global::System.Web.UI.WebControls.Label labSemester;
+        
+        /// <summary>
+        /// labStudentNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labStudentNumber;
+        
+        /// <summary>
+        /// labStudentName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labStudentName;
         
         /// <summary>
         /// labMager control.
@@ -58,94 +76,31 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Label labMager;
         
         /// <summary>
-        /// labSection control.
+        /// txtReasonDelay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labSection;
+        protected global::System.Web.UI.WebControls.TextBox txtReasonDelay;
         
         /// <summary>
-        /// txtAlternativeHoursC1 control.
+        /// fuSignatureStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAlternativeHoursC1;
+        protected global::System.Web.UI.WebControls.FileUpload fuSignatureStudent;
         
         /// <summary>
-        /// txtAlternativeNum1C1 control.
+        /// labDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAlternativeNum1C1;
-        
-        /// <summary>
-        /// ddlAlternativeCourse1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAlternativeCourse1;
-        
-        /// <summary>
-        /// txtNumHoursC1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumHoursC1;
-        
-        /// <summary>
-        /// ddlTypeCourse1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTypeCourse1;
-        
-        /// <summary>
-        /// txtNumberCourse1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumberCourse1;
-        
-        /// <summary>
-        /// ddlCourse1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCourse1;
-        
-        /// <summary>
-        /// txtReason control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReason;
-        
-        /// <summary>
-        /// fuSignature control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuSignature;
+        protected global::System.Web.UI.WebControls.Label labDate;
         
         /// <summary>
         /// btnSave control.

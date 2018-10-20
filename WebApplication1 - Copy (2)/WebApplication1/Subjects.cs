@@ -69,4 +69,45 @@ public class Subjects
 
     }
 
+
+    public DataTable dtSearchStudentSubjectTypAndHours(int SubjectID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select Type ,Hours From Subjects WHERE SubjectID="+ SubjectID +"",Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+    public DataRow drSearchStudentSubjectTypAndHours( int SubjectID)
+    {
+        DataTable dt = null;
+        DataRow dr = null;
+         dt = dtSearchStudentSubjectTypAndHours(SubjectID);
+        if (dt != null)
+        {
+            int xount = Convert.ToUInt16(dt.Rows.Count.ToString());
+            dr = dt.Rows[0];
+        }
+        else
+        {
+            dr = null;
+        }
+        return dr;
+
+    }
+
+    public DataTable dtSearchSubjectName(int SubjectID)
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select SubjectName From Subjects WHERE SubjectID=" + SubjectID + "", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
 }

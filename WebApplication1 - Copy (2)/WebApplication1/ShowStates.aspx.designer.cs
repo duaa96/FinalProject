@@ -22,67 +22,67 @@ namespace WebApplication1 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ddlCollage control.
+        /// labCollage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCollage;
+        protected global::System.Web.UI.WebControls.Label labCollage;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// labYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.Label labYear;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// labSemester control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Label labSemester;
         
         /// <summary>
-        /// txtNumberStudent control.
+        /// labStudentNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumberStudent;
+        protected global::System.Web.UI.WebControls.Label labStudentNumber;
         
         /// <summary>
-        /// txtNameStudent control.
+        /// labStudentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNameStudent;
+        protected global::System.Web.UI.WebControls.Label labStudentName;
         
         /// <summary>
-        /// txtSpecialty control.
+        /// labMager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSpecialty;
+        protected global::System.Web.UI.WebControls.Label labMager;
         
         /// <summary>
-        /// txtSectionStudent control.
+        /// labSection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSectionStudent;
+        protected global::System.Web.UI.WebControls.Label labSection;
         
         /// <summary>
         /// txtStatus control.
@@ -103,12 +103,21 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.FileUpload fuSignatureStudent;
         
         /// <summary>
-        /// txtDate control.
+        /// labDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDate;
+        protected global::System.Web.UI.WebControls.Label labDate;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

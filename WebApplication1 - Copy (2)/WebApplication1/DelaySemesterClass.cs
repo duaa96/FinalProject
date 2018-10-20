@@ -5,14 +5,15 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
-public class DelaySemester
+public class DelaySemesterClass
 {
     private string Connectionstring = ConfigurationManager.ConnectionStrings["myConnectionString"].ToString();
 
     public int  AddDelaySemester(int StudentID, string Year, string Semester, string Description, string Date, string RegestrationDescr, string RegestrationDate, string DeanDescription, string Decision, int ApplicationID)
     {
-        string Query = "INSERT INTO DelaySemester(StudentID  ,Year , Semester ,  Description ,  Date ,   RegestrationDescr ,  RegestrationDate ,   DeanDescription , Decision, ApplicationID )VALUES(@StudentID    ,  @Year , @Semester , @Description ,  @Date ,  @RegestrationDescr ,  @RegestrationDate ,  @DeanDescription , @Decision, @ApplicationID) ";
+        string Query = "INSERT INTO DelaySemester(StudentID  ,Year , Semester ,  Description ,  Date ,   RegestrationDescr ,  RegestrationDate ,   DeanDescription , Decision, ApplicationID )VALUES(@StudentID ,  @Year , @Semester , @Description ,  @Date ,  @RegestrationDescr ,  @RegestrationDate ,  @DeanDescription , @Decision, @ApplicationID) ";
         SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
         SqlCommand Command = new SqlCommand(Query, Connection);
 
         Command.CommandType = CommandType.Text;

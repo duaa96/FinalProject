@@ -79,7 +79,7 @@ namespace WebApplication1
                         if (sdr.Read())
                         {
                             Session["ID"] = "1";
-                            Response.Redirect("Dropsemester.aspx");
+                            Response.Redirect("HomeStudent.aspx");
                             lbWrong.Text = "Login Sucess......!!";
                             lbWrong.Visible = true;
                         }

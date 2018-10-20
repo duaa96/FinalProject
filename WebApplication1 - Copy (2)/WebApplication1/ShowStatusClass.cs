@@ -5,14 +5,15 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
-public class ShowStatus
+public class ShowStatusClass
 {
     private string Connectionstring = ConfigurationManager.ConnectionStrings["myConnectionString"].ToString();
 
     public int AddShowStatus(int StudentID, string Year, string semester, string Date, string Description, string HeadDescription, int HeadAccept, string HeadDate, string DeanDescription, int DeanAccept, string DeanDate, int ApplicationID)
     {
-        string Query = "INSERT INTO ShowStatus( StudentID, Year  ,  semester , Date ,Description,HeadDescription,  HeadAccept, HeadDate , DeanDescription, DeanAccept, DeanDate,ApplicationID)VALUES(@StudentID,@Year  , @semester ,@Date ,@Description,@HeadDescription,@HeadAccept,@HeadDate ,@DeanDescription,@DeanAccept,@ DeanDate, @ApplicationID) ";
+        string Query = "INSERT INTO ShowStatus( StudentID, Year  ,  semester , Date ,Description,HeadDescription,  HeadAccept, HeadDate , DeanDescription, DeanAccept, DeanDate,ApplicationID)VALUES(@StudentID,@Year,@semester,@Date ,@Description,@HeadDescription,@HeadAccept,@HeadDate ,@DeanDescription,@DeanAccept,@DeanDate, @ApplicationID) ";
         SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
         SqlCommand Command = new SqlCommand(Query, Connection);
 
         Command.CommandType = CommandType.Text;
@@ -21,6 +22,7 @@ public class ShowStatus
         Command.Parameters.AddWithValue("@semester", semester);
         Command.Parameters.AddWithValue("@Date", Date);
         Command.Parameters.AddWithValue("@Description", Description);
+        Command.Parameters.AddWithValue("@HeadDescription", HeadDescription);
         Command.Parameters.AddWithValue("@HeadAccept", HeadAccept);
         Command.Parameters.AddWithValue("@HeadDate", HeadDate);
         Command.Parameters.AddWithValue("@DeanDescription", DeanDescription);
@@ -32,6 +34,7 @@ public class ShowStatus
         Connection.Close();
         return x;
     }
+
 
     public void UpdateShowStatus(int ID, int StudentID, string Year, string semester, string Date, string Description, string HeadDescription, int HeadAccept, string HeadDate, string DeanDescription, int DeanAccept, string DeanDate, int ApplicationID)
     {
@@ -72,5 +75,84 @@ public class ShowStatus
         Connection.Close();
     }
 
+    // Head GetData Application
+    public DataTable dtNotShowStatusHeadApplication()
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from ShowStatus where HeadAccept=0 OR HeadAccept IS null", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+    }
+    public int AcceptHeadShowStatus(int ID)
+    {
+        string Query = "Update  ShowStatus set HeadAccept =1 where ID = @ID ";
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
 
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.CommandType = CommandType.Text;
+        Command.Parameters.AddWithValue("@ID", ID);
+        int x = Command.ExecuteNonQuery();
+        Connection.Close();
+        return x;
+    }
+
+    public int NotAcceptHeadShowStatus(int ID)
+    {
+        string Query = "Update  ShowStatus set HeadAccept =2 where ID = @ID ";
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.CommandType = CommandType.Text;
+        Command.Parameters.AddWithValue("@ID", ID);
+        int x = Command.ExecuteNonQuery();
+        Connection.Close();
+        return x;
+    }
+
+    //Dean GetData Application
+    public DataTable dtNotAcceptDeanShowStatusApplication()
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from ShowStatus where HeadAccept<>0 and HeadAccept IS not null  and (DeanAccept = 0 OR DeanAccept IS null) ", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+    }
+
+    public int AcceptDeanShowStatus(int ID)
+    {
+        string Query = "Update  ShowStatus set DeanAccept =1 where ID = @ID ";
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.CommandType = CommandType.Text;
+        Command.Parameters.AddWithValue("@ID", ID);
+        int x = Command.ExecuteNonQuery();
+        Connection.Close();
+        return x;
+    }
+
+    public int NotAcceptDeanShowStatus(int ID)
+    {
+        string Query = "Update  ShowStatus set DeanAccept =2 where ID = @ID ";
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.CommandType = CommandType.Text;
+        Command.Parameters.AddWithValue("@ID", ID);
+        int x = Command.ExecuteNonQuery();
+        Connection.Close();
+        return x;
+    }
 }

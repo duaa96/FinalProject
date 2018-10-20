@@ -84,4 +84,46 @@ public class AbsenceExam
         Command.ExecuteNonQuery();
         Connection.Close();
     }
+
+    public int AcceptAbsenceExam(int ID)
+    {
+        string Query = "Update  AbsenceExam set DeanAccept =1 where ID = @ID ";
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.CommandType = CommandType.Text;
+        Command.Parameters.AddWithValue("@ID", ID);
+       int x= Command.ExecuteNonQuery();
+        Connection.Close();
+        return x;
+    }
+
+    public int  NotAcceptAbsenceExam(int ID)
+    {
+        string Query = "Update  AbsenceExam set DeanAccept =2 where ID = @ID ";
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        SqlCommand Command = new SqlCommand(Query, Connection);
+
+        Command.CommandType = CommandType.Text;
+        Command.Parameters.AddWithValue("@ID", ID);
+      int x=  Command.ExecuteNonQuery();
+        Connection.Close();
+        return x;
+    }
+
+    public DataTable dtNotAcceptApsenceApplication()
+    {
+        SqlConnection Connection = new SqlConnection(Connectionstring);
+        Connection.Open();
+        DataTable dt = new DataTable();
+        SqlDataAdapter DA = new SqlDataAdapter("select * from AbsenceExam,Subjects where AbsenceExam.Subject1 =Subjects.SubjectID  and (DeanAccept = 0 OR DeanAccept IS null ) ", Connection);
+        DA.Fill(dt);
+        Connection.Close();
+        return dt;
+
+    }
+
 }
